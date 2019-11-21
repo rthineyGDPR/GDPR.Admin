@@ -1,0 +1,4 @@
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "johnpapa.vscode-peacock"
+  ],
