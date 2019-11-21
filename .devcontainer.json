@@ -2,3 +2,24 @@
     "dbaeumer.vscode-eslint",
     "johnpapa.vscode-peacock"
   ],
+"settings":[ 
+  "workbench.colorCustomizations": {
+  "activityBar.background": "#2e3f78",
+  "activityBar.foreground": "#FFF",
+  "activityBar.hoverBackground": "#bb7712",
+  "activityBar.inactiveForeground": "#15202b99",
+  "activityBarBadge.background": "#741b1d",
+  "activityBarBadge.foreground": "#FFF",
+  "breadcrumb.background": "#2e3f78",
+  "statusBar.background": "#2e3f78",
+  "statusBar.foreground": "#FFF",
+  "statusBarItem.hoverBackground": "#ba8435",
+  "titleBar.activeBackground": "#2e3f78",
+  "titleBar.activeForeground": "#15202b",
+  "titleBar.border": "#741b1d",
+  "titleBar.hoverBackground": "#741b1d",
+  "titleBar.inactiveBackground": "#2e3f78",
+  "titleBar.inactiveForeground": "#15202b99",
+"titleBar.foreground": "#FFF",
+    }
+  ]
