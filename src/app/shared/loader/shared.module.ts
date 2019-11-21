@@ -2,11 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  NgbModule,
-  NgbDateParserFormatter,
-  NgbDateAdapter
-} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbDateParserFormatter, NgbDateAdapter } from '@ng-bootstrap/ng-bootstrap';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { AppSharedModule } from '../appshared';
@@ -30,7 +26,7 @@ import {
   FormSelectComponent,
   FormFieldErrorComponent,
   FormsService,
-  FieldColorValidationDirective
+  FieldColorValidationDirective,
 } from './components';
 // Pipes
 import { UppercasePipe } from './pipes/uppercase.pipe';
@@ -60,7 +56,8 @@ import { CustomDateFormatter, CustomNgbDateNativeUTCAdapter } from './services';
     FormCheckboxListComponent,
     FormRadioListComponent,
     FormSelectComponent
-  ],
+  ]
+  ,
   declarations: [
     UppercasePipe,
     SubMenuComponent,
@@ -113,10 +110,11 @@ import { CustomDateFormatter, CustomNgbDateNativeUTCAdapter } from './services';
   providers: [
     FormsService,
     { provide: NgbDateParserFormatter, useClass: CustomDateFormatter },
-    { provide: NgbDateAdapter, useClass: CustomNgbDateNativeUTCAdapter }
+    { provide: NgbDateAdapter, useClass: CustomNgbDateNativeUTCAdapter },
   ]
+
 })
-export class SharedModule {}
+export class SharedModule { }
 
 export * from './components';
 export * from './pipes';
