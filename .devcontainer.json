@@ -1,8 +1,8 @@
-  "extensions": [
+  {"extensions": [
     "dbaeumer.vscode-eslint",
     "johnpapa.vscode-peacock"
   ],
-"settings":[ 
+ "settings": {
   "workbench.colorCustomizations": {
   "activityBar.background": "#2e3f78",
   "activityBar.foreground": "#FFF",
@@ -22,4 +22,5 @@
   "titleBar.inactiveForeground": "#15202b99",
 "titleBar.foreground": "#FFF",
     }
-  ]
+ 
+ }
