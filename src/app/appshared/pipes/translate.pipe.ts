@@ -4,11 +4,11 @@ import { AppService } from '@app/services';
 
 @Injectable()
 @Pipe({
-    name: 'translate'
+  name: 'translate'
 })
 export class TranslatePipe implements PipeTransform {
-    constructor(private appService: AppService) { }
-    transform(query: string): any {
-        return this.appService.appData.content[query] || query;
-    }
+  constructor(private appService: AppService) {}
+  transform(query: string): any {
+    return this.appService.appData.content[query] || query;
+  }
 }

@@ -1,14 +1,14 @@
-import { TransferState, makeStateKey } from "@angular/platform-browser";
-import { Injectable, Inject } from "@angular/core";
-import { DataService } from "./data.service";
-import { AuthService } from "./auth.service";
+import { TransferState, makeStateKey } from '@angular/platform-browser';
+import { Injectable, Inject } from '@angular/core';
+import { DataService } from './data.service';
+import { AuthService } from './auth.service';
 
-const APP_DATA_KEY = makeStateKey<string>("appData");
+const APP_DATA_KEY = makeStateKey<string>('appData');
 
 @Injectable()
 export class AppService {
   constructor(
-    @Inject("BASE_URL") private baseUrl: string,
+    @Inject('BASE_URL') private baseUrl: string,
     private transferState: TransferState,
     private dataService: DataService
   ) {}

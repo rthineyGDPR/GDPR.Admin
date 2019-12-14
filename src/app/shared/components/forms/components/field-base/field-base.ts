@@ -8,15 +8,13 @@ import { FormsService } from '../../forms.service';
 
 @Injectable()
 export abstract class FieldBaseComponent implements Field {
-    config: IFieldConfig;
-    constructor(
-        public fc: AppFormComponent,
-        private formService: FormsService) { }
-    get formGroup(): FormGroup {
-        return this.fc.form;
-    }
+  config: IFieldConfig;
+  constructor(public fc: AppFormComponent, private formService: FormsService) {}
+  get formGroup(): FormGroup {
+    return this.fc.form;
+  }
 
-    showAsterisk(config: IFieldConfig): boolean {
-        return this.formService.showIndicator(config);
-    }
+  showAsterisk(config: IFieldConfig): boolean {
+    return this.formService.showIndicator(config);
+  }
 }

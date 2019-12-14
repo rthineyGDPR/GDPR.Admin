@@ -15,11 +15,11 @@ import { ModalStateService } from '@app/services';
  * in order to register the modal template to the internal modal state
  */
 @Directive({
-    // tslint:disable-next-line:directive-selector
-    selector: 'ng-template[modal]'
+  // tslint:disable-next-line:directive-selector
+  selector: 'ng-template[modal]'
 })
 export class ModalTemplateDirective {
-    constructor(modalTemplate: TemplateRef<any>, state: ModalStateService) {
-        state.template = modalTemplate;
-    }
+  constructor(modalTemplate: TemplateRef<any>, state: ModalStateService) {
+    state.template = modalTemplate;
+  }
 }

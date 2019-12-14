@@ -4,5 +4,4 @@ import { Component } from '@angular/core';
   selector: 'appc-privacy-component',
   templateUrl: './privacy.component.html'
 })
-
-export class PrivacyComponent { }
+export class PrivacyComponent {}

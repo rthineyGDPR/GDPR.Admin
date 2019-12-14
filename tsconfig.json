@@ -19,10 +19,7 @@
       "dom"
     ],
     "baseUrl": "./",
-    "paths": {
-      "@app/*": ["src/app/*"],
-      "@env/*": ["src/environments/*"]
-    }
+     
   },
   "angularCompilerOptions": {
     "preserveWhitespaces": true

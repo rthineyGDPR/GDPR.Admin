@@ -7,21 +7,21 @@ import { IModalOptions } from '@app/models';
  * The component displayed in the confirmation modal opened by the ModalService.
  */
 @Component({
-    selector: 'appc-modal-component',
-    templateUrl: './modal.component.html'
+  selector: 'appc-modal-component',
+  templateUrl: './modal.component.html'
 })
 export class ModalComponent {
-    options: IModalOptions;
+  options: IModalOptions;
 
-    constructor(private state: ModalStateService) {
-        this.options = state.options;
-    }
+  constructor(private state: ModalStateService) {
+    this.options = state.options;
+  }
 
-    yes() {
-        this.state.modal.close('confirmed');
-    }
+  yes() {
+    this.state.modal.close('confirmed');
+  }
 
-    no() {
-        this.state.modal.dismiss('not confirmed');
-    }
+  no() {
+    this.state.modal.dismiss('not confirmed');
+  }
 }

@@ -10,18 +10,18 @@ import { IModalOptions } from '@app/models';
  */
 @Injectable()
 export class ModalStateService {
-    /**
-     * The last options passed ConfirmService.confirm()
-     */
-    options: IModalOptions;
+  /**
+   * The last options passed ConfirmService.confirm()
+   */
+  options: IModalOptions;
 
-    /**
-     * The last opened confirmation modal
-     */
-    modal: NgbModalRef;
+  /**
+   * The last opened confirmation modal
+   */
+  modal: NgbModalRef;
 
-    /**
-     * The template containing the confirmation modal component
-     */
-    template: TemplateRef<any>;
+  /**
+   * The template containing the confirmation modal component
+   */
+  template: TemplateRef<any>;
 }

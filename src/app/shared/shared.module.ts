@@ -113,11 +113,10 @@ import { CustomDateFormatter, CustomNgbDateNativeUTCAdapter } from './services';
   providers: [
     FormsService,
     { provide: NgbDateParserFormatter, useClass: CustomDateFormatter },
-    { provide: NgbDateAdapter, useClass: CustomNgbDateNativeUTCAdapter },
+    { provide: NgbDateAdapter, useClass: CustomNgbDateNativeUTCAdapter }
   ]
-
 })
-export class SharedModule { }
+export class SharedModule {}
 
 export * from './components';
 export * from './pipes';
