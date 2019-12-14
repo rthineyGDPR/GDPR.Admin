@@ -1,0 +1,29 @@
+<mgl-timeline [toggle]="true" [alternate]="true" [side]="true">
+  <mgl-timeline-entry *ngFor="let entry of data; let i = index" (expand)="onExpandEntry($event, i)">
+    <mgl-timeline-entry-header (click)="onHeaderClick($event)">
+      <div>
+        <strong>{{ entry.header | titlecase }}</strong>
+      </div>
+    </mgl-timeline-entry-header>
+    <mgl-timeline-entry-content>
+      <div>
+        <div><strong>Entity:</strong>{{ entry.contentSide.entityType }}</div>
+        <!-- <div><strong>EntityID:</strong>{{ entry.contentSide.entityId }}</div> -->
+        <div><strong>Data:</strong>{{ entry.contentSide.loggedEvent }}</div>
+
+        {{ entry.contentSide.createdOn | amFromUtc | amLocal | amDateFormat: 'MMM Do YYYY h:mm a' }}
+      </div>
+    </mgl-timeline-entry-content>
+    <mgl-timeline-entry-dot
+      [class]="color ? 'primary' : 'accent'"
+      [size]="size"
+      (click)="onDotClick($event)"
+    ></mgl-timeline-entry-dot>
+    <mgl-timeline-entry-side
+      ><strong>{{ entry.contentSide.createdOn | amFromUtc | amLocal | amTimeAgo: false }}</strong>
+      <div>
+        {{ entry.contentSide.email }}
+      </div>
+    </mgl-timeline-entry-side>
+  </mgl-timeline-entry>
+</mgl-timeline>
