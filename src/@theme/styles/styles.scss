@@ -1,0 +1,31 @@
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
+// themes - our custom or/and out of the box themes
+@import "themes";
+
+// framework component themes (styles tied to theme variables)
+@import "~@nebular/theme/styles/globals";
+@import "~@nebular/auth/styles/all";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+@import "~angular-mgl-timeline/theme";
+// loading progress bar theme
+
+@import "./layout";
+@import "./overrides";
+$mgl-app-theme: mat-light-theme(#2e3f78, #741b1d, #bb7712);
+// install the framework and custom global styles
+@include nb-install() {
+  // framework global styles
+  @include nb-theme-global();
+  @include nb-auth-global();
+
+  @include ngx-layout();
+  // loading progress bar
+
+  @include nb-overrides();
+  //timeline
+  @include mgl-timeline-theme($mgl-app-theme);
+}

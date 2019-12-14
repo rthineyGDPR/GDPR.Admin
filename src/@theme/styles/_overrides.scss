@@ -1,0 +1,53 @@
+@import "./themes";
+@import "~angular-mgl-timeline/theme";
+@mixin nb-overrides() {
+  nb-sidebar {
+    box-shadow: none;
+  }
+  nb-select.size-medium button {
+    padding: 0.4375rem 2.2rem 0.4375rem 1.125rem !important;
+
+    nb-icon {
+      right: 0.41rem !important;
+    }
+  }
+  nb-input {
+    font-weight: normal;
+  }
+}
+
+@mixin mgl-timeline-theme($baseThemeVariables) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, #fff);
+  $typographyConfig: mat-typography-config();
+
+  mgl-timeline {
+    font-family: "Roboto";
+
+    & mgl-timeline-entry {
+      & .mgl-timeline-entry-card {
+        @include mat-elevation(4);
+        background-color: map-get($background, card) !important;
+        color: map-get($foreground, base);
+
+        & .mgl-timeline-entry-card-header {
+          background-color: map-get($background, app-bar) !important;
+        }
+      }
+
+      & mgl-timeline-entry-dot {
+        @include mat-elevation(8);
+
+        &.primary {
+          background-color: mat-color($primary);
+        }
+
+        &.accent {
+          background-color: mat-color($accent);
+        }
+      }
+    }
+  }
+}
