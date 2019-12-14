@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { ModalStateService } from './modal-state.service';
- 
+
 /**
  * A confirmation service, allowing to open a confirmation modal from anywhere and get back a promise.
  */
